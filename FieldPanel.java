@@ -37,13 +37,13 @@ public class FieldPanel extends JPanel implements MouseListener, MouseMotionList
 	FieldPanel() {
 		super();
 		setBackground(new Color(255, 255, 255));
-		audioFinish = Applet.newAudioClip(MainWindow.class.getResource("img\\finish.wav"));
+		audioFinish = Applet.newAudioClip(MainWindow.class.getResource("finish.wav"));
 		audioFinish.play();
 		audioFinish.stop();
-		audioBass = Applet.newAudioClip(MainWindow.class.getResource("img\\Bassdrum.wav"));
+		audioBass = Applet.newAudioClip(MainWindow.class.getResource("Bassdrum.wav"));
 		audioBass.play();
 		audioBass.stop();
-		audioTrumpet = Applet.newAudioClip(MainWindow.class.getResource("img\\trumpet1.wav"));
+		audioTrumpet = Applet.newAudioClip(MainWindow.class.getResource("trumpet1.wav"));
 		audioTrumpet.play();
 		audioTrumpet.stop();
 		
@@ -183,26 +183,26 @@ public class FieldPanel extends JPanel implements MouseListener, MouseMotionList
 				if(nownum < 75){//回転開始
 					audioFinish.stop();
 					if(rn.nextInt(100) < 80){
-						audioFinish = Applet.newAudioClip(MainWindow.class.getResource("img\\finish.wav"));
+						audioFinish = Applet.newAudioClip(MainWindow.class.getResource("finish.wav"));
 					}else{
 						switch(rn.nextInt(3)){
 						case 0:
-							audioFinish = Applet.newAudioClip(MainWindow.class.getResource("img\\finish2.wav"));
+							audioFinish = Applet.newAudioClip(MainWindow.class.getResource("finish2.wav"));
 							break;
 						case 1:	
-							audioFinish = Applet.newAudioClip(MainWindow.class.getResource("img\\finish3.wav"));
+							audioFinish = Applet.newAudioClip(MainWindow.class.getResource("finish3.wav"));
 							break;
 						case 2:	
-							audioFinish = Applet.newAudioClip(MainWindow.class.getResource("img\\finish4.wav"));
+							audioFinish = Applet.newAudioClip(MainWindow.class.getResource("finish4.wav"));
 							break;
 						}
 					}
 					roll = true;
 					if(rn.nextInt(2) == 0){
-						audioRoll = Applet.newAudioClip(MainWindow.class.getResource("img\\roll.wav"));
+						audioRoll = Applet.newAudioClip(MainWindow.class.getResource("roll.wav"));
 						audioRoll.loop();
 					}else{
-						audioRoll = Applet.newAudioClip(MainWindow.class.getResource("img\\roll2.wav"));
+						audioRoll = Applet.newAudioClip(MainWindow.class.getResource("roll2.wav"));
 						audioRoll.play();
 					}
 					//audioBass.play();
